@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.griffon:griffon-swing:2.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-swing/2.8.0/425fd1ef50db12f7fc7bc2c9bb616f9bf8f68b12/griffon-swing-2.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-swing/2.8.0/7cc50c4af55f99e25cb614e7111cbdd6c076cc6a/griffon-swing-2.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

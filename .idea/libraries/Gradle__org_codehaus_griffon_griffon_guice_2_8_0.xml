@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.griffon:griffon-guice:2.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-guice/2.8.0/31e9a98966741a69bdeae9ce1e9956fe62f1d14d/griffon-guice-2.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.griffon/griffon-guice/2.8.0/e8fd0edda34861dcb8379fb78bc6eaee9b892ce/griffon-guice-2.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

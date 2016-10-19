@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monadiva.iml" filepath="$PROJECT_DIR$/.idea/modules/monadiva.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monadiva_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/monadiva_integrationTest.iml" group="monadiva" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monadiva_main.iml" filepath="$PROJECT_DIR$/.idea/modules/monadiva_main.iml" group="monadiva" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/monadiva_test.iml" filepath="$PROJECT_DIR$/.idea/modules/monadiva_test.iml" group="monadiva" />
+    </modules>
+  </component>
+</project>
