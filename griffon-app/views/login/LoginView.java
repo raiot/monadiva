@@ -63,7 +63,7 @@ public class LoginView extends AbstractSwingGriffonView {
         loginButtonConstraints.gridy = 3;
 
         final JPanel headerPanel = new JPanel();
-        ImageIcon image = new ImageIcon(((new ImageIcon(getImage("/monadiva-logo.png")).getImage()).getScaledInstance(450, 150, Image.SCALE_SMOOTH)));
+        ImageIcon image = new ImageIcon(((new ImageIcon(getImage("/monadiva-logo.png")).getImage()).getScaledInstance(350, 205, Image.SCALE_SMOOTH)));
         JLabel imageLabel = new JLabel("", image, JLabel.CENTER);
         headerPanel.setName("headerPanel");
         headerPanel.add(imageLabel, BorderLayout.CENTER);
