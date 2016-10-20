@@ -5,7 +5,7 @@ import org.fest.swing.fixture.FrameFixture;
 import org.junit.Rule;
 import org.junit.Test;
 
-public class MonadivaIntegrationTest {
+public class LoginIntegrationTest {
     static {
         System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "trace");
         System.setProperty("griffon.swing.edt.violations.check", "true");
@@ -18,14 +18,13 @@ public class MonadivaIntegrationTest {
     private FrameFixture window;
 
     @Test
-    public void clickButton() {
+    public void loginButton() {
+        //set
+        window.textBox("userNameTextField").setText("adm");
+        window.textBox("passwordField").setText("123");
+
         // given:
-        window.label("clickLabel").requireText("0");
-
-        // when:
-        window.button("clickButton").click();
-
-        // then:
-        window.label("clickLabel").requireText("1");
+        window.textBox("userNameTextField").requireText("adm");
+        window.textBox("passwordField").requireText("123");
     }
 }

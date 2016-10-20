@@ -20,7 +20,7 @@ public class LoginView extends AbstractSwingGriffonView {
     private LoginModel model;
     private LoginController controller;
 
-    private final String LOGIN_WINDOW_NAME = "loginWindow";
+    final String windowName = "loginWindow";
 
     @MVCMember
     public void setModel(@Nonnull LoginModel model) {
@@ -37,11 +37,11 @@ public class LoginView extends AbstractSwingGriffonView {
 
     public void initUI() {
         JFrame window = (JFrame) getApplication().createApplicationContainer(Collections.<String, Object>emptyMap());
-        window.setName(LOGIN_WINDOW_NAME);
+        window.setName(windowName);
         window.setTitle(getApplication().getConfiguration().getAsString("login.title"));
         window.setMinimumSize(new Dimension(800, 300));
         window.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        getApplication().getWindowManager().attach(LOGIN_WINDOW_NAME, window);
+        getApplication().getWindowManager().attach(windowName, window);
         JPanel userNamePanel = new JPanel();
         userNamePanel.setName("userNamePanel");
         JPanel passwordPanel = new JPanel();
