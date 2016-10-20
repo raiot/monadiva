@@ -2,9 +2,11 @@ package monadiva;
 
 import griffon.core.test.GriffonFestRule;
 import org.fest.swing.fixture.FrameFixture;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
+@Ignore
 public class LoginIntegrationTest {
     static {
         System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "trace");
@@ -26,5 +28,8 @@ public class LoginIntegrationTest {
         // given:
         window.textBox("userNameTextField").requireText("adm");
         window.textBox("passwordField").requireText("123");
+
+        //expect
+        window.button("loginButton").click();
     }
 }

@@ -1,5 +1,6 @@
 import griffon.core.GriffonApplication;
 import org.codehaus.griffon.runtime.core.AbstractLifecycleHandler;
+import shared.AppProperties;
 
 import javax.annotation.Nonnull;
 import javax.inject.Inject;
@@ -19,6 +20,7 @@ public class Initialize extends AbstractLifecycleHandler {
         if (isMacOSX()) {
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                AppProperties.load();
             } catch (ClassNotFoundException | UnsupportedLookAndFeelException | IllegalAccessException | InstantiationException e) {
                 e.printStackTrace();
             }
