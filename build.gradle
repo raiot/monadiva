@@ -16,6 +16,7 @@ buildscript {
         classpath 'de.gliderpilot.gradle.jnlp:gradle-jnlp-plugin:0.2.1'
         classpath 'net.nemerosa:versioning:2.4.0'
         classpath 'postgresql:postgresql:9.4.1208-jdbc42-atlassian-hosted'
+        classpath 'log4j:log4j:1.2.17'
     }
 }
 
@@ -58,6 +59,7 @@ apply plugin: 'com.github.kt3k.coveralls'
 dependencies {
     compile "org.codehaus.griffon:griffon-guice:${griffon.version}"
     compile 'postgresql:postgresql:9.4.1208-jdbc42-atlassian-hosted'
+    compile 'log4j:log4j:1.2.17'
 
     runtime 'org.slf4j:slf4j-simple:1.7.21'
 
