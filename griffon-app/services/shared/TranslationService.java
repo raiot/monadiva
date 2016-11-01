@@ -38,6 +38,9 @@ public class TranslationService extends AbstractGriffonService {
             }
             resultSet.close();
             statement.close();
+            if(translation == null || translation.isEmpty()) {
+                translation = name;
+            }
         } catch (SQLException e) {
             translation = name;
         }

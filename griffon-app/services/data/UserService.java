@@ -13,12 +13,12 @@ import java.sql.SQLException;
 import org.apache.log4j.Logger;
 
 @ArtifactProviderFor(GriffonService.class)
-public class LoginService extends AbstractGriffonService {
+public class UserService extends AbstractGriffonService {
 
-    final static Logger logger = Logger.getLogger(LoginService.class);
+    final static Logger logger = Logger.getLogger(UserService.class);
     Connection connection;
 
-    public LoginService() {
+    public UserService() {
         connection = DatabaseConnectorManager.getDatabaseConnection();
     }
 
