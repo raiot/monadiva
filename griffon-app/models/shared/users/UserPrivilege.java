@@ -1,4 +1,4 @@
-package users;
+package shared.users;
 
 
 public enum UserPrivilege {

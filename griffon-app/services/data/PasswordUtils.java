@@ -24,7 +24,7 @@ public class PasswordUtils {
      *
      * @return a 16 bytes random salt
      */
-    public static byte[] getNextSalt() {
+    static byte[] getNextSalt() {
         byte[] salt = new byte[16];
         RANDOM.nextBytes(salt);
         return salt;
@@ -39,7 +39,7 @@ public class PasswordUtils {
      *
      * @return the hashed password with a pinch of salt
      */
-    public static byte[] hash(char[] password, byte[] salt) {
+    static byte[] hash(char[] password, byte[] salt) {
         PBEKeySpec spec = new PBEKeySpec(password, salt, ITERATIONS, KEY_LENGTH);
         Arrays.fill(password, Character.MIN_VALUE);
         try {
@@ -62,7 +62,7 @@ public class PasswordUtils {
      *
      * @return true if the given password and salt match the hashed value, false otherwise
      */
-    public static boolean isExpectedPassword(char[] password, byte[] salt, byte[] expectedHash) {
+    static boolean isExpectedPassword(char[] password, byte[] salt, byte[] expectedHash) {
         byte[] pwdHash = hash(password, salt);
         Arrays.fill(password, Character.MIN_VALUE);
         if (pwdHash.length != expectedHash.length) return false;

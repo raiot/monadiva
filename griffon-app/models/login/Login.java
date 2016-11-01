@@ -2,10 +2,11 @@ package login;
 
 import org.codehaus.griffon.runtime.core.AbstractObservable;
 
-public class Login extends AbstractObservable {
-    protected String userName;
-    protected String password;
-    protected String error;
+class Login extends AbstractObservable {
+    private String userName;
+    private String password;
+    private String error;
+    private boolean isValidUser;
 
     public String getUserName() {
         return userName;
@@ -23,12 +24,21 @@ public class Login extends AbstractObservable {
         firePropertyChange("password", password, this.password = password);
     }
 
-    public String getError() {
+    String getError() {
         return error;
     }
 
-    public void setError(String error) {
+    void setError(String error) {
         final String oldValue = this.error;
         firePropertyChange("error", oldValue, this.error = error);
+    }
+
+    public boolean isValidUser() {
+        return isValidUser;
+    }
+
+    void setIsValidUser(boolean isValidUser) {
+        final boolean oldValue = this.isValidUser;
+        firePropertyChange("isValidUser", oldValue, isValidUser);
     }
 }

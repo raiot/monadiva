@@ -20,7 +20,7 @@ public class AppProperties {
         }
     }
 
-    public static String getProperty(String name, String defaultValue) {
+    static String getProperty(String name, String defaultValue) {
         return getPropertyWithPrefix(name, defaultValue);
     }
 
@@ -29,12 +29,12 @@ public class AppProperties {
         return getPropertyWithPrefix(propertyNamePrefixed);
     }
 
-    public static String getPropertyWithPrefix(String nameWithPrefix) {
+    static String getPropertyWithPrefix(String nameWithPrefix) {
         Object property = properties.get(nameWithPrefix);
         return property == null ? "" : property.toString();
     }
 
-    public static String getPropertyWithPrefix(String nameWithPrefix, String defaultValue) {
+    static String getPropertyWithPrefix(String nameWithPrefix, String defaultValue) {
         String property = getPropertyWithPrefix(nameWithPrefix);
         if(property == null || property.isEmpty()) {
             property = defaultValue;

@@ -28,6 +28,7 @@ public class TranslationService extends AbstractGriffonService {
     public String getTranslation(String name, int langId) {
         String translation = "";
         try {
+            //language=PostgresSQL
             PreparedStatement statement = connection.prepareStatement("SELECT value FROM translations WHERE name = ? AND langid = ?");
             statement.setString(1, name);
             statement.setInt(2, langId);

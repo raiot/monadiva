@@ -11,19 +11,20 @@ import javax.annotation.Nonnull;
 import javax.inject.Inject;
 
 @ArtifactProviderFor(GriffonController.class)
-public class LoginController extends AbstractGriffonController {
+class LoginController extends AbstractGriffonController {
     private LoginModel model;
 
     @Inject
     private TranslationService translationService;
 
     @MVCMember
-    public void setModel(@Nonnull LoginModel model) {
+    void setModel(@Nonnull LoginModel model) {
         this.model = model;
     }
 
     @Threading(Threading.Policy.INSIDE_UITHREAD_ASYNC)
     public void login() {
-        model.getModel().setError(translationService.getTranslation("ERROR_LOGIN_INCORRECT_USER_PASSWORD"));
+        model.getModel().setIsValidUser(true);
+        //model.getModel().setError(translationService.getTranslation("ERROR_LOGIN_INCORRECT_USER_PASSWORD"));
     }
 }
