@@ -29,17 +29,16 @@ public class ControlView extends AbstractSwingGriffonView {
     @Override
     public void initUI() {
         JFrame window = (JFrame) getApplication().createApplicationContainer(Collections.<String, Object>emptyMap());
+        JTabbedPane tabbedPane = new JTabbedPane();
+        JPanel userControlTab = new JPanel();
+        JPanel moneyControlTab = new JPanel();
+
         final String windowName = "controlWindow";
         window.setName(windowName);
         window.setTitle(getApplication().getConfiguration().getAsString("application.title"));
-        JTabbedPane tabbedPane = new JTabbedPane();
         window.setMinimumSize(WindowProperties.getStandarWindowDimension());
         tabbedPane.setMinimumSize(WindowProperties.getStandarWindowDimension());
-        JPanel userControlTab = new JPanel();
         userControlTab.setName("userControlTab");
-        JLabel userNameLabel = new JLabel(translationService.getTranslation("USER_CONTROL_TAB"));
-        userControlTab.add(userNameLabel);
-        JPanel moneyControlTab = new JPanel();
         moneyControlTab.setName("moneyControlTab");
         tabbedPane.setName("controlTab");
         tabbedPane.addTab(translationService.getTranslation("USER_CONTROL_TAB"), userControlTab);

@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../griffon-app/views" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../griffon-app/i18n" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../griffon-app/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../griffon-app/errors" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/groovy" isTestSource="false" />

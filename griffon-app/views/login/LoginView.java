@@ -60,8 +60,8 @@ class LoginView extends AbstractSwingGriffonView {
         final ImageIcon image = new ImageIcon(((new ImageIcon(getImage("/monadiva-logo.png")).getImage()).getScaledInstance(350, 205, Image.SCALE_SMOOTH)));
         final JLabel imageLabel = new JLabel("", image, JLabel.CENTER);
         final JLabel errorDisplayLabel = new JLabel();
-        final JLabel userNameLabel = new JLabel(translationService.getTranslation("LOGIN_USERNAME_LABEL"));
-        final JLabel passwordLabel = new JLabel(translationService.getTranslation("LOGIN_PASSWORD_LABEL"));
+        final JLabel userNameLabel = new JLabel(translationService.getTranslation("USERNAME_LABEL"));
+        final JLabel passwordLabel = new JLabel(translationService.getTranslation("PASSWORD_LABEL"));
         final JTextField userNameTextField = new JTextField(15);
         final JPasswordField passwordField = new JPasswordField(15);
         final GridBagConstraints headerConstraints = new GridBagConstraints();

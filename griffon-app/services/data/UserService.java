@@ -4,6 +4,8 @@ import griffon.core.artifact.GriffonService;
 import griffon.metadata.ArtifactProviderFor;
 import org.apache.log4j.Logger;
 import org.codehaus.griffon.runtime.core.artifact.AbstractGriffonService;
+import shared.ExceptionFactory;
+import shared.ExceptionType;
 import shared.users.User;
 import shared.users.UserPrivilege;
 
@@ -22,7 +24,7 @@ class UserService extends AbstractGriffonService {
         connection = DatabaseConnectorManager.getDatabaseConnection();
     }
 
-    public User getUser(String name, String password) {
+    public User getUser(String name, String password) throws Exception {
         User user = new User();
         try {
             //language=PostgresSQL
@@ -44,11 +46,12 @@ class UserService extends AbstractGriffonService {
             }
         } catch (SQLException e) {
             logger.error("A SQL error occurred: " + e.getMessage());
+            throw ExceptionFactory.create(ExceptionType.USER_NOT_FOUND);
         }
         return user;
     }
 
-    public void addUser(User user) {
+    public void addUser(User user) throws Exception {
         try {
             //language=PostgresSQL
             final String sqlStatement = "INSERT INTO public.users (name, lastName, privilege_id, address, phone hashedPassword, salt) values (?, ?, ?, ?, ?, ?, ?)";
@@ -64,6 +67,7 @@ class UserService extends AbstractGriffonService {
             statement.setBytes(7, salt);
         } catch (SQLException e) {
             logger.error("A SQL error occurred: " + e.getMessage());
+            throw ExceptionFactory.create(ExceptionType.USER_NOT_SAVED);
         }
     }
 }
