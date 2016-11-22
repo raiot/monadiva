@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @ArtifactProviderFor(GriffonService.class)
-class UserService extends AbstractGriffonService {
+public class UserService extends AbstractGriffonService {
 
     private final static Logger logger = Logger.getLogger(UserService.class);
     private Connection connection;

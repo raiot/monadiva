@@ -1,11 +1,7 @@
 package shared;
 
-import griffon.core.artifact.GriffonArtifact;
-import griffon.metadata.ArtifactProviderFor;
-
 import javax.inject.Inject;
 
-@ArtifactProviderFor(GriffonArtifact.class)
 public class ExceptionFactory {
 
     private ExceptionFactory(){}

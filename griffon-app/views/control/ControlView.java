@@ -15,6 +15,8 @@ import java.util.Map;
 @ArtifactProviderFor(GriffonView.class)
 public class ControlView extends AbstractSwingGriffonView {
 
+    private JTabbedPane tabbedPane;
+
     @Inject
     private TranslationService translationService;
 
@@ -29,8 +31,8 @@ public class ControlView extends AbstractSwingGriffonView {
     @Override
     public void initUI() {
         JFrame window = (JFrame) getApplication().createApplicationContainer(Collections.<String, Object>emptyMap());
-        JTabbedPane tabbedPane = new JTabbedPane();
-        JPanel userControlTab = new JPanel();
+        tabbedPane = new JTabbedPane();
+
         JPanel moneyControlTab = new JPanel();
 
         final String windowName = "controlWindow";
@@ -38,15 +40,19 @@ public class ControlView extends AbstractSwingGriffonView {
         window.setTitle(getApplication().getConfiguration().getAsString("application.title"));
         window.setMinimumSize(WindowProperties.getStandarWindowDimension());
         tabbedPane.setMinimumSize(WindowProperties.getStandarWindowDimension());
-        userControlTab.setName("userControlTab");
+
         moneyControlTab.setName("moneyControlTab");
+
         tabbedPane.setName("controlTab");
-        tabbedPane.addTab(translationService.getTranslation("USER_CONTROL_TAB"), userControlTab);
         tabbedPane.addTab(translationService.getTranslation("MONEY_CONTROL_TAB"), moneyControlTab);
 
         window.add(tabbedPane);
         window.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         getApplication().getWindowManager().attach(windowName, window);
 
+    }
+
+    public JTabbedPane getTabbedPane() {
+        return tabbedPane;
     }
 }

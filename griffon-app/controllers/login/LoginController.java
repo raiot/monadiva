@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
 import javax.inject.Inject;
 
 @ArtifactProviderFor(GriffonController.class)
-class LoginController extends AbstractGriffonController {
+public class LoginController extends AbstractGriffonController {
     private LoginModel model;
 
     @Inject

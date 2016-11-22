@@ -19,7 +19,7 @@ import java.util.Map;
 import static java.awt.GridBagConstraints.*;
 
 @ArtifactProviderFor(GriffonView.class)
-class LoginView extends AbstractSwingGriffonView {
+public class LoginView extends AbstractSwingGriffonView {
 
     private LoginModel model;
     private LoginController controller;

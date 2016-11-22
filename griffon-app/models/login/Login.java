@@ -2,7 +2,7 @@ package login;
 
 import org.codehaus.griffon.runtime.core.AbstractObservable;
 
-class Login extends AbstractObservable {
+public class Login extends AbstractObservable {
     private String userName;
     private String password;
     private String error;
